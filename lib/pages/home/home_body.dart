@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:grocers/bloc/categories_index/categories_index_bloc.dart';
 import 'package:grocers/bloc/menu/menu_bloc.dart';
-import 'package:grocers/bloc/user/user_bloc.dart';
 import 'package:grocers/pages/menu_detail.dart/menu_detail.dart';
 import 'package:grocers/pages/search/search.dart';
 import 'package:grocers/widget/categories_widget.dart';
