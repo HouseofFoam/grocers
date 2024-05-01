@@ -17,3 +17,12 @@ class InsertMenusEvent extends MenuEvent {
   @override
   List<Object> get props => [menu];
 }
+
+class ChangeMenusByTypeEvent extends MenuEvent {
+  final String type;
+
+  const ChangeMenusByTypeEvent({required this.type});
+
+  @override
+  List<Object> get props => [type];
+}

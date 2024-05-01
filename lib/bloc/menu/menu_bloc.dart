@@ -12,8 +12,19 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
     on<InsertMenusEvent>((event, emit) async {
       emit(MenuInitial());
       try {
-        repository.setData(menus: event.menu);
+        repository.setMenuData(menus: event.menu);
         final List<Menu> fetch = await repository.getAllMenu();
+        emit(MenuHasData(menus: fetch));
+      } catch (e) {
+        emit(MenuHasError(error: e.toString()));
+      }
+    });
+    on<ChangeMenusByTypeEvent>((event, emit) async {
+      emit(MenuInitial());
+      try {
+        final List<Menu> fetch = event.type.isNotEmpty
+            ? await repository.getMenusByType(type: event.type)
+            : await repository.getAllMenu();
         emit(MenuHasData(menus: fetch));
       } catch (e) {
         emit(MenuHasError(error: e.toString()));
