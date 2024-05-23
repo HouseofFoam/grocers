@@ -41,7 +41,7 @@ class HomeBody extends StatelessWidget {
                     const SizedBox(
                       width: 160,
                       child: Text(
-                        "Buy 3 get 1 Cake Free for Rp. 30,000",
+                        "Buy 3 get 1 Cake Free for Rp. 30,000 Limited",
                         maxLines: 3,
                         style: TextStyle(
                             fontSize: 20,
